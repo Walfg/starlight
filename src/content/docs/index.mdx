@@ -12,15 +12,19 @@ hero:
       icon: right-arrow
 ---
 
-import { Card, CardGrid } from '@astrojs/starlight/components';
+import { Card, CardGrid } from "@astrojs/starlight/components";
 
 ## Next steps
 
 <CardGrid stagger>
-	<Card title="Contact us" icon="pencil">
-		info@retrotour-madrid.com
-	</Card>
-	<Card title="Looking for a call" icon="add-document">
-		+34 602 45 50 67
-	</Card>
+  <Card title="Contact us" icon="pencil">
+    info@retrotour-madrid.com
+  </Card>
+  <Card title="Looking for a call" icon="add-document">
+    <a href="tel:+34602455067">+34 602 45 50 67</a>
+    <br />
+    <a href="http://wa.me/+34602455067" target="_blank" rel="noopener noreferrer">
+      <button>Contactar por WhatsApp</button>
+    </a>
+  </Card>
 </CardGrid>
