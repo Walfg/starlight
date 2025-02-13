@@ -15,6 +15,9 @@ hero:
 import { useState } from "react";
 import { Card, CardGrid } from "@astrojs/starlight/components";
 
+// Asegúrate de tener instalados react y react-dom:
+// npm install react react-dom
+
 export default function RetroTourPage() {
   const [language, setLanguage] = useState("es");
 
@@ -66,6 +69,15 @@ export default function RetroTourPage() {
           <Card title={t.callUs} icon="add-document">
             <a href={`tel:${t.phoneNumber}`}>{t.phoneNumber}</a>
             <br />
+            <a
+              href="http://wa.me/+34602455067"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button>{t.whatsappButton}</button>
+            </a>
+          </Card>
+          <Card title="WhatsApp" icon="phone">
             <a
               href="http://wa.me/+34602455067"
               target="_blank"
