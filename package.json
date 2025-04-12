@@ -11,6 +11,7 @@
     "astro": "astro"
   },
   "dependencies": {
+    "@astrojs/react": "^4.2.0",
     "@astrojs/starlight": "^0.31.1",
     "astro": "^5.1.5",
     "react": "^19.0.0",

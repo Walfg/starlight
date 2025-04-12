@@ -1,22 +1,5 @@
----
-title: Welcome to Retro Tour Madrid
-description: Site under maintenance.
-template: splash
-hero:
-  tagline: Site under maintenance. Stay tuned!
-  image:
-    file: ../../assets/houston.webp
-  actions:
-    - text: Ask us for a Tour
-      link: http://wa.me/+34602455067
-      icon: right-arrow
----
-
 import { useState } from "react";
 import { Card, CardGrid } from "@astrojs/starlight/components";
-
-// Asegúrate de tener instalados react y react-dom:
-// npm install react react-dom
 
 export default function RetroTourPage() {
   const [language, setLanguage] = useState("es");

@@ -1,0 +1,55 @@
+---
+# Campos que Starlight necesita como strings.
+title: "Retro Tour Madrid"
+description: "Site under maintenance."
+template: splash
+hero:
+  tagline: "Site under maintenance. Stay tuned!"
+  image:
+    file: ../../assets/houston.webp
+  actions:
+    - text: "Ask us for a Tour"
+      link: http://wa.me/+34602455067
+      icon: right-arrow
+
+# Campo personalizado para manejar traducciones en el contenido.
+translations:
+  en:
+    heading: "Next steps"
+    contactCard: "Contact us"
+    callCard: "Looking for a call?"
+    whatsappCard: "Contact via WhatsApp"
+  es:
+    heading: "Próximos pasos"
+    contactCard: "Contáctanos"
+    callCard: "¿Buscas una llamada?"
+    whatsappCard: "Contactar por WhatsApp"
+---
+
+import { Card, CardGrid } from "@astrojs/starlight/components";
+
+<script>
+  // Cambia manualmente entre "en" y "es" según necesites
+  const lang = 'es';
+  const { translations } = Astro.frontmatter;
+</script>
+
+# {lang === 'es' ? 'Bienvenido a Retro Tour Madrid' : 'Welcome to Retro Tour Madrid'}
+
+_{lang === 'es' ? 'Sitio en mantenimiento.' : 'Site under maintenance.'}_
+
+## {translations[lang].heading}
+
+<CardGrid stagger>
+  <Card title={translations[lang].contactCard} icon="pencil">
+    info@retrotour-madrid.com
+  </Card>
+  <Card title={translations[lang].callCard} icon="add-document">
+    <a href="tel:+34602455067">+34 602 45 50 67</a>
+  </Card>
+  <Card title={translations[lang].whatsappCard} icon="add-document">
+    <a href="http://wa.me/+34602455067" target="_blank" rel="noopener noreferrer">
+      <button>{translations[lang].whatsappCard}</button>
+    </a>
+  </Card>
+</CardGrid>
